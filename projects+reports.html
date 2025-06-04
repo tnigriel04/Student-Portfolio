@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Slider Design | X-Dev</title>
+	<title>Projects</title>
 	<link rel="stylesheet" href="xdev.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -12,21 +12,23 @@
 </head>
 
 <body>
+
 	<nav>
 		<label class="logo">Student Portfolio</label>
-		<ul>
-			<li><a class="aa" href="index.html">Home</a></li>
-			<li><a class="aa" href="projects+reports.html">Projects & Reports</a></li>
-			<li><a class="aa" href="contact.html">Contact</a></li>
-			<li><a class="aa" href="thankyou.html">Thank You!</a></li>
-		</ul>
+		<button class="menu" id="menopen">Menu</button>
+		<div class="popupwin" id="popwin">
+			<ul class="popup-over">
+				<li><a class="aa" href="index.html"><img class="icons" src="home.png" alt="Home icon">Home</a></li>
+				<li><a class="aa" href="projects+reports.html"><img class="icons" src="projects.png" alt="Projects icon">Projects</a></li>
+				<li><a class="aa" href="contact.html"><img class="icons" src="coninfo.png" alt="Contact icon">Contact</a></li>
+				<li><a class="aa" href="thankyou.html"><img class="icons" src="thank-you.png" alt="Thanks icon">Thank You!</a></li>
+			</ul>
+		</div>
 	</nav>
 
 	<div class="container">
-
 		<div class="slide">
-
-			<div class="item">
+			<div class="item" style="background-image: url('webscreen.png'); backdrop-filter: blur(40px);">
 				<div class="content">
 					<div class="name">Website Portfolio</div>
 					<div class="des">This is the current website you're on. It was always an interest of mine to make a
@@ -35,7 +37,7 @@
 				</div>
 			</div>
 
-			<div class="item">
+			<div class="item" style="background-image: url('calculator.png');">
 				<div class="content">
 					<div class="name">Calculator</div>
 					<div class="des">In my attempt to build this website, I decided to incorporate more javascript, html
@@ -43,16 +45,7 @@
 					<button>See More</button>
 				</div>
 			</div>
-			
-			<div class="item">
-				<div class="content">
-					<div class="name">Soldering Iron</div>
-					<div class="des">This was an earlier project that I worked on in highschool. It is built with stuff
-						found in my room, the intention
-						is refine it and make it stronger.</div>
-					<button>See More</button>
-				</div>
-			</div>
+	
 			<div class="item">
 				<div class="content">
 					<div class="name">Snake Game Python</div>

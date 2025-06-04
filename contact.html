@@ -1,42 +1,49 @@
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Contact Page</title>
 		<link rel="stylesheet" href="contact.css">
-		<script src="contact.js"></script>
 	</head>
 
 	<body>
+		
 		<nav>
 			<label class="logo">Student Portfolio</label>
-			<ul>
-				<li><a class="aa" href="index.html">Home</a></li>
-				<li><a class="aa" href="projects+reports.html">Projects & Reports</a></li>
-				<li><a class="aa" href="contact.html">Contact</a></li>
-				<li><a class="aa" href="thankyou.html">Thank You!</a></li>
-			</ul>
+			<button class="menu" id="menopen">Menu</button>
+			<div class="popupwin" id="popwin">
+				<ul class="popup-over">
+					<li><a class="aa" href="index.html"><img class="icons" src="home.png" alt="Home icon">Home</a></li>
+					<li><a class="aa" href="projects+reports.html"><img class="icons" src="projects.png"
+						alt="Projects icon">Projects</a></li>
+					<li><a class="aa" href="contact.html"><img class="icons" src="coninfo.png" alt="Contact icon">Contact</a></li>
+					<li><a class="aa" href="thankyou.html"><img class="icons" src="thank-you.png" alt="Thanks icon">Thank You!</a></li>
+				</ul>
+			</div>
 		</nav>
 
 		<div class="Contacts">
-			<form action="https://api.web3forms.com/submit" method="POST" class="contactsection">
-				<div class="contacttitles">
-					<h2>Let's Connect!</h2>
-					<hr>
-				</div>
-				<input type="hidden" name="access_key" value="fafc3cfc-5daf-4d49-a4f7-5a5f052fdfcf">
-				<input type="text" name="name" placeholder="Name" class="contactspace" required>
-				<input type="text" name="phone" placeholder="Phone" class="contactspace" required>
-				<input type="text" name="email" placeholder="Email" class="contactspace" required>
-				<textarea name="message" placeholder="Message" class="contactspace"></textarea>
-				<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-				<button type="submit">Submit</button>
-			</form>
-			<div class="threeD">
-				<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.92/build/spline-viewer.js" async></script>
-				<spline-viewer url="https://prod.spline.design/bptVUk0Dr1PxCjkI/scene.splinecode"><img
-						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAANCAYAAADISGwcAAAG1ElEQVR4AQCBAH7/AHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgV0YGYRdGBmG3RgZiB0YGYgdGBmG3RgZhF0YGYFdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAAIEAfv8AdGBmCnRgZgZ0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYHdGBmFXRgZiJ0YGYsdGBmMXRgZjF0YGYsdGBmInRgZhV0YGYHdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmBXRgZggAgQB+/wB0YGYWdGBmEnRgZgx0YGYEdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYBdGBmDnRgZh10YGYsdGBmOnRgZkR0YGZJdGBmSXRgZkR0YGY6dGBmLHRgZh10YGYOdGBmAXRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAnRgZgp0YGYQdGBmEwCBAH7/AHRgZhp0YGYXdGBmEXRgZgp0YGYDdGBmAHRgZgB0YGYAdGBmBHRgZg90YGYddGBmLXRgZj50YGZMdGBmV3RgZl10YGZddGBmV3RgZk10YGY/dGBmLnRgZh50YGYPdGBmBHRgZgB0YGYAdGBmAHRgZgF0YGYIdGBmDnRgZhR0YGYXAIEAfv8AdGBmE3RgZhB0YGYLdGBmBHRgZgB0YGYAdGBmAHRgZgB0YGYFdGBmEXRgZiF0YGYydGBmRHRgZlN0YGZfdGBmZXRgZmZ0YGZgdGBmVXRgZkZ0YGY1dGBmI3RgZhR0YGYHdGBmAHRgZgB0YGYAdGBmAHRgZgR0YGYJdGBmDnRgZhEAgQB+/wB0YGYGdGBmA3RgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYLdGBmHHRgZi90YGZBdGBmUnRgZl50YGZldGBmZnRgZmB0YGZVdGBmRnRgZjR0YGYidGBmEXRgZgR0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYFdGBmBwCBAH7/AHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgZ0YGYYdGBmK3RgZj50YGZPdGBmXHRgZmN0YGZkdGBmX3RgZlR0YGZFdGBmM3RgZiF0YGYQdGBmAnRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYDAIEAfv8AdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmBnRgZhh0YGYrdGBmPnRgZk90YGZcdGBmZHRgZmV0YGZgdGBmVnRgZkd0YGY2dGBmJHRgZhN0YGYGdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYBdGBmBXRgZgcAgQB+/wB0YGYKdGBmB3RgZgJ0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYJdGBmGnRgZix0YGY/dGBmUHRgZl10YGZkdGBmZnRgZmF0YGZXdGBmSXRgZjl0YGYodGBmGHRgZgt0YGYCdGBmAHRgZgB0YGYAdGBmBXRgZgp0YGYOdGBmEQCBAH7/AHRgZhN0YGYPdGBmCXRgZgJ0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgh0YGYYdGBmKXRgZjt0YGZKdGBmV3RgZl50YGZgdGBmXHRgZlJ0YGZFdGBmNXRgZiV0YGYWdGBmC3RgZgN0YGYAdGBmAHRgZgR0YGYKdGBmD3RgZhR0YGYXAIEAfv8AdGBmFHRgZhB0YGYKdGBmAnRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgx0YGYcdGBmLXRgZjx0YGZIdGBmT3RgZlB0YGZMdGBmQ3RgZjd0YGYodGBmGXRgZgt0YGYBdGBmAHRgZgB0YGYAdGBmAHRgZgV0YGYLdGBmEHRgZhMAgQB+/wB0YGYOdGBmCnRgZgN0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgt0YGYbdGBmKXRgZjR0YGY7dGBmPHRgZjh0YGYwdGBmI3RgZhV0YGYHdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYFdGBmCQGBAH7/AHRgZgh0YGYEdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZg10YGYbdGBmJnRgZix0YGYudGBmKnRgZiF0YGYVdGBmB3RgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYA1vcigvmixtAAAAAASUVORK5CYII="
-						alt="Spline preview" style="width: 100%; height: 100%;" /></spline-viewer>
+		<form action="https://api.web3forms.com/submit" method="POST" class="contactsection">
+			<div class="contacttitles">
+				<h2>Let's Connect!</h2>
+				<hr>
 			</div>
-		</div>
+			<input type="hidden" name="access_key" value="fafc3cfc-5daf-4d49-a4f7-5a5f052fdfcf">
+			<div class="inpfir"><input type="text" name="name" placeholder="Name" class="contactspace" required>
+			<input type="text" name="phone" placeholder="Phone" class="contactspace" required>
+			<input type="text" name="email" placeholder="Email" class="contactspace" required></div>
+			<div class="inpsec"><textarea name="message" placeholder="Message" class="contactspace"></textarea></div>
+			<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+			<button type="submit" class="contbutt">Submit</button>
+		</form>
 
+		<div class="threeD">
+			<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.92/build/spline-viewer.js" async></script>
+			<spline-viewer url="https://prod.spline.design/bptVUk0Dr1PxCjkI/scene.splinecode"><img
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAANCAYAAADISGwcAAAG1ElEQVR4AQCBAH7/AHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgV0YGYRdGBmG3RgZiB0YGYgdGBmG3RgZhF0YGYFdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAAIEAfv8AdGBmCnRgZgZ0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYHdGBmFXRgZiJ0YGYsdGBmMXRgZjF0YGYsdGBmInRgZhV0YGYHdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmBXRgZggAgQB+/wB0YGYWdGBmEnRgZgx0YGYEdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYBdGBmDnRgZh10YGYsdGBmOnRgZkR0YGZJdGBmSXRgZkR0YGY6dGBmLHRgZh10YGYOdGBmAXRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAnRgZgp0YGYQdGBmEwCBAH7/AHRgZhp0YGYXdGBmEXRgZgp0YGYDdGBmAHRgZgB0YGYAdGBmBHRgZg90YGYddGBmLXRgZj50YGZMdGBmV3RgZl10YGZddGBmV3RgZk10YGY/dGBmLnRgZh50YGYPdGBmBHRgZgB0YGYAdGBmAHRgZgF0YGYIdGBmDnRgZhR0YGYXAIEAfv8AdGBmE3RgZhB0YGYLdGBmBHRgZgB0YGYAdGBmAHRgZgB0YGYFdGBmEXRgZiF0YGYydGBmRHRgZlN0YGZfdGBmZXRgZmZ0YGZgdGBmVXRgZkZ0YGY1dGBmI3RgZhR0YGYHdGBmAHRgZgB0YGYAdGBmAHRgZgR0YGYJdGBmDnRgZhEAgQB+/wB0YGYGdGBmA3RgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYLdGBmHHRgZi90YGZBdGBmUnRgZl50YGZldGBmZnRgZmB0YGZVdGBmRnRgZjR0YGYidGBmEXRgZgR0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYFdGBmBwCBAH7/AHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgZ0YGYYdGBmK3RgZj50YGZPdGBmXHRgZmN0YGZkdGBmX3RgZlR0YGZFdGBmM3RgZiF0YGYQdGBmAnRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYDAIEAfv8AdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmBnRgZhh0YGYrdGBmPnRgZk90YGZcdGBmZHRgZmV0YGZgdGBmVnRgZkd0YGY2dGBmJHRgZhN0YGYGdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYBdGBmBXRgZgcAgQB+/wB0YGYKdGBmB3RgZgJ0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYJdGBmGnRgZix0YGY/dGBmUHRgZl10YGZkdGBmZnRgZmF0YGZXdGBmSXRgZjl0YGYodGBmGHRgZgt0YGYCdGBmAHRgZgB0YGYAdGBmBXRgZgp0YGYOdGBmEQCBAH7/AHRgZhN0YGYPdGBmCXRgZgJ0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgh0YGYYdGBmKXRgZjt0YGZKdGBmV3RgZl50YGZgdGBmXHRgZlJ0YGZFdGBmNXRgZiV0YGYWdGBmC3RgZgN0YGYAdGBmAHRgZgR0YGYKdGBmD3RgZhR0YGYXAIEAfv8AdGBmFHRgZhB0YGYKdGBmAnRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgx0YGYcdGBmLXRgZjx0YGZIdGBmT3RgZlB0YGZMdGBmQ3RgZjd0YGYodGBmGXRgZgt0YGYBdGBmAHRgZgB0YGYAdGBmAHRgZgV0YGYLdGBmEHRgZhMAgQB+/wB0YGYOdGBmCnRgZgN0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgt0YGYbdGBmKXRgZjR0YGY7dGBmPHRgZjh0YGYwdGBmI3RgZhV0YGYHdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYFdGBmCQGBAH7/AHRgZgh0YGYEdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZg10YGYbdGBmJnRgZix0YGYudGBmKnRgZiF0YGYVdGBmB3RgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYAdGBmAHRgZgB0YGYA1vcigvmixtAAAAAASUVORK5CYII="
+					alt="Spline preview" style="width: 100%; height: 100%;" /></spline-viewer>
+		</div>
+		</div>
+		<script src="contact.js"></script>
 	</body>
 </html>

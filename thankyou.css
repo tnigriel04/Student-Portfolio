@@ -8,32 +8,31 @@ body {
     background: #45a46b;
 }
 
+
+@media (min-width: 1031px){
 nav {
     width: 100%;
-    height: 60px;
+    height: 10vh;
     display: flex;
-    margin: 0px;
     position: fixed;
     background: #3b8d5c;
     z-index: 1000;
 }
 
-
 nav ul {
-    float: right;
-    margin-right: 20px;
-    margin-left: 100px;
+    margin-left: 15vw;
 }
 
 nav ul li {
     display: inline-block;
-    line-height: 60px;
+    line-height: 10vh;
     margin: 0 5px;
+    vertical-align: middle;
 }
 
 nav ul li a {
     color: white;
-    font-size: 18px;
+    font-size: 1.5vw;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: capitalize;
@@ -51,7 +50,7 @@ nav ul li a {
     content: '';
     height: 3px;
     width: 0;
-    background: #c7a925;
+    background: wheat;
     position: absolute;
     left: 0px;
     bottom: -6px;
@@ -68,18 +67,396 @@ nav ul li a {
 
 label.logo {
     color: white;
-    font-size: 20px;
-    line-height: 60px;
+    font-size: 2vw;
+    line-height: 10vh;
     padding: 0 20px;
     font-weight: bolder;
     text-transform: uppercase;
+    width: 35vw;
+    vertical-align: middle;
+}
+
+.icons {
+    width: 1.5vw;
+    height: 3vh;
+    vertical-align: middle;
+}
+
+.menu {
+    display: none;   }
+
+.threeDa{
+    display: flex;
+    width: 97vw;
+    height: 85vh;
+    translate: 1vw 11vh;
+}
+}
+
+
+
+@media (max-width: 1030px) {
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    line-height: 5.5vh;
+    margin: 0 5px;
+    translate: 2vw -2vh;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 2vw;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    position: relative;
+    transition: all .4s;
+}
+
+.aa:hover,
+.aa:focus {
+    color: #fff;
 
 }
 
-.threeDa{
+.aa::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: wheat;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    opacity: 0;
+    transition: width .3s;
+    pointer-events: none;
+}
+
+.aa:hover::after,
+.aa:focus::after {
+    opacity: 1;
     width: 100%;
-    height: 500px;
-    translate: 0px 65px;
+}
+
+label.logo {
+    color: white;
+    background: #29894f;
+    font-size: 6vw;
+    line-height: 10vh;
+    padding: 0 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 80vw;
+    vertical-align: middle;
+    display: flex;
+    justify-content: middle;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.icons {
+    width: 2vw;
+    height: 3vh;
+
+}
+
+.menu {
+    display: flex;
+    margin-left: 5vw;
+    padding: 5px 10px;
+    border: 1.5px solid rgb(176, 176, 176);
+    background: rgb(244, 150, 244);
+    color: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.resbut::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(97, 192, 148);
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+}
+
+/* glow */
+.menu::before {
+    content: "";
+    background: linear-gradient(45deg, white, rgb(125, 125, 234), rgb(224, 115, 115));
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* hover */
+.menu:hover::before {
+    opacity: 1;
+}
+
+.menu:active:after {
+    background: transparent;
+}
+
+.menu:active {
+    color: #000;
+    font-weight: bold;
+}
+
+.popupwin {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-over {
+    background-color: rgb(128, 128, 128);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    width: 20vw;
+    height: 20vw;
+    padding: 20px;
+    animation: fadeIn 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    translate: -34vw -15vh;
+}
+
+.threeDa {
+    display: flex;
+    width: 97vw;
+    height: 85vh;
+    translate: 1vw 11vh;
+}   
+}
+
+
+@media (max-width: 435px) {
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    line-height: 5.5vh;
+    margin: 0 5px;
+    translate: 2vw -2vh;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 2vh;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    position: relative;
+    transition: all .4s;
+}
+
+.aa:hover,
+.aa:focus {
+    color: #fff;
+
+}
+
+.aa::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: wheat;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    opacity: 0;
+    transition: width .3s;
+    pointer-events: none;
+}
+
+.aa:hover::after,
+.aa:focus::after {
+    opacity: 1;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    background: #29894f;
+    font-size: 6vw;
+    line-height: 7vh;
+    padding: 0 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 80vw;
+    vertical-align: middle;
+    display: flex;
+    justify-content: middle;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.icons {
+    width: 4vw;
+    height: 2vh;
+    vertical-align: middle;
+}
+
+.menu {
+    display: flex;
+    margin-left: 5vw;
+    padding: 5px 10px;
+    border: 1.5px solid rgb(176, 176, 176);
+    background: rgb(244, 150, 244);
+    color: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.resbut::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(97, 192, 148);
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+}
+
+/* glow */
+.menu::before {
+    content: "";
+    background: linear-gradient(45deg, white, rgb(125, 125, 234), rgb(224, 115, 115));
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* hover */
+.menu:hover::before {
+    opacity: 1;
+}
+
+.menu:active:after {
+    background: transparent;
+}
+
+.menu:active {
+    color: #000;
+    font-weight: bold;
+}
+
+.popupwin {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-over {
+    background-color: rgb(128, 128, 128);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    width: 50vw;
+    height: 35vh;
+    padding: 20px;
+    animation: fadeIn 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    translate: -25vw -25vh;
+}
+
+.threeDa {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    translate: 0vw 0vh;
+    border: 2px solid red;
+}
 }
 
 /*#jumpgame{

@@ -28,7 +28,7 @@ if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
 
 document.addEventListener("keydown", function (event) {
 jump();
-});*/
+});
 
 
 
@@ -48,4 +48,19 @@ const openBtn = document.getElementById('openPopup');
             if (e.target === popupOverlay) {
                 popupOverlay.style.display = 'none';
             }
-        });
+        });*/
+
+
+
+const openbtn = document.getElementById('menopen');
+const popupover = document.getElementById('popwin');
+
+openbtn.addEventListener('click', () => {
+    popupover.style.display = 'flex';
+});
+
+popupover.addEventListener('click', (e) => {
+    if (e.target === popupover) {
+        popupover.style.display = 'none';
+    }
+});
