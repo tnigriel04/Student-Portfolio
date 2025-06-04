@@ -541,7 +541,7 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    font-size: 18px;
+    font-size: 4vw;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: capitalize;
@@ -590,8 +590,8 @@ label.logo {
 }
 
 .icons {
-    width: 5vw;
-    height: 3vh;
+    width: 4vw;
+    height: 2vh;
     vertical-align: middle;
 }
 
@@ -675,7 +675,7 @@ label.logo {
     background-color: rgb(128, 128, 128);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgb(0, 0, 0);
-    width: 80vw;
+    width: 70vw;
     height: 40vh;
     padding: 20px;
     animation: fadeIn 0.3s;
@@ -683,7 +683,7 @@ label.logo {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    translate: -20vw -33vh;
+    translate: -10vw -20vh;
 }
 
 .popup-over a{
