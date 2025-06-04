@@ -1723,7 +1723,7 @@ section h2 {
     display: flex;
     height: 19vh;
     width: 35vw;
-    translate: -1vw -11vh;
+    translate: -1vw -5vh;
     border: 2px solid rgb(180, 180, 180);
 }
 
@@ -1758,7 +1758,7 @@ section h2 {
     gap: .5vh;
     height: 20vh;
     width: 55vw;
-    translate: 36vw -30vh;
+    translate: 36vw -25vh;
 }
 
 .third {
@@ -1768,7 +1768,7 @@ section h2 {
 
 .reslink button{
     display: flex;
-    translate: 25vw -40vh;
+    translate: 25vw -25vh;
     width: 25vw;
     padding: 5px 10px;
     border: 1.5px solid rgb(0, 0, 0);
